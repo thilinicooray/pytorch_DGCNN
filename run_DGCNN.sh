@@ -8,12 +8,12 @@ test_number=${3-0}  # if specified, use the last test_number graphs as test data
 # general settings
 gm=DGCNN  # model
 gpu_or_cpu=gpu
-GPU=0  # select the GPU number
+GPU=${0}  # select the GPU number
 CONV_SIZE="32-32-32-1"
 sortpooling_k=0.6  # If k <= 1, then k is set to an integer so that k% of graphs have nodes less than this integer
 FP_LEN=0  # final dense layer's input dimension, decided by data
 n_hidden=128  # final dense layer's hidden size
-bsize=1  # batch size, set to 50 or 100 to accelerate training
+bsize=32  # batch size, set to 50 or 100 to accelerate training
 dropout=True
 
 # dataset-specific settings
