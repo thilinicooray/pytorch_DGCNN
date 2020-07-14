@@ -95,7 +95,7 @@ if [ ${fold} == 0 ]; then
   echo "Average accuracy and std are"
   tail -10 ${DATA}_acc_results.txt | awk '{ sum += $1; sum2 += $1*$1; n++ } END { if (n > 0) print sum / n; print sqrt(sum2 / n - (sum/n) * (sum/n)); }'
 else
-  CUDA_VISIBLE_DEVICES=${GPU} python main.py \
+  CUDA_VISIBLE_DEVICES=${GPU} python -u main.py \
       -seed 1 \
       -data $DATA \
       -fold $fold \
