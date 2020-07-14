@@ -39,7 +39,7 @@ DD)
   learning_rate=0.00001
   ;;
 PTC)
-  num_epochs=200
+  num_epochs=1000
   learning_rate=0.0001
   ;;
 PROTEINS)
